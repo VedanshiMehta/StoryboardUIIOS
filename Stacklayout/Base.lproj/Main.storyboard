@@ -25,20 +25,36 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-Iz-bPD" userLabel="Card Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6" translatesAutoresizingMaskIntoConstraints="NO" id="4b3-wJ-DJ7">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="4b3-wJ-DJ7">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card10" translatesAutoresizingMaskIntoConstraints="NO" id="xgT-e9-A9H">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="xgT-e9-A9H">
                                                 <rect key="frame" x="150" y="0.0" width="120" height="170"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17l-Z9-7mz" userLabel="Deal Button">
-                                        <rect key="frame" x="82.333333333333343" y="189.99999999999994" width="105.66666666666666" height="45"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="dealbutton"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="dealbutton"/>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-dI-wjh" userLabel="Button Stack View">
+                                        <rect key="frame" x="19.333333333333329" y="189.99999999999994" width="231.33333333333337" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17l-Z9-7mz" userLabel="Deal Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="45"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button" image="dealbutton"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="dealbutton"/>
+                                                <connections>
+                                                    <action selector="dealButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zvc-1Q-jWp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNA-bd-hZ5" userLabel="Replay Button">
+                                                <rect key="frame" x="125.66666666666666" y="0.0" width="105.66666666666666" height="45"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="replay"/>
+                                                <connections>
+                                                    <action selector="replayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wE5-oQ-2OB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=compact" spacing="20"/>
                             </stackView>
@@ -92,6 +108,12 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAu-1L-VNo" userLabel="message">
+                                <rect key="frame" x="220" y="655.66666666666663" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -108,24 +130,33 @@
                             <constraint firstItem="fq0-Ej-Do6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="kn2-KU-L6J">
                                 <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="QAu-1L-VNo" firstAttribute="top" secondItem="TVS-kv-m11" secondAttribute="bottom" constant="40" id="lqa-Lb-VXu"/>
                             <constraint firstItem="TVS-kv-m11" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="mqP-DY-081">
                                 <variation key="heightClass=compact-widthClass=regular" constant="70"/>
                             </constraint>
+                            <constraint firstItem="QAu-1L-VNo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v1q-zu-PL7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zue-eb-Ykt" secondAttribute="trailing" constant="20" id="zaS-Kt-duR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CPUScore" destination="jsb-Gy-HOt" id="1Ui-eM-rkK"/>
+                        <outlet property="leftImageView" destination="4b3-wJ-DJ7" id="3Yr-96-W4w"/>
+                        <outlet property="messageLabel" destination="QAu-1L-VNo" id="eVu-Cm-Lqu"/>
+                        <outlet property="playerScore" destination="9xg-jW-iFf" id="i2f-jB-Q8v"/>
+                        <outlet property="rightImageView" destination="xgT-e9-A9H" id="zTE-U4-1Tm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.3305439330544" y="130.90909090909091"/>
+            <point key="canvasLocation" x="139.09090909090909" y="130.54393305439331"/>
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="120" height="170"/>
         <image name="background" width="414" height="896"/>
-        <image name="card10" width="120" height="170"/>
-        <image name="card6" width="120" height="170"/>
         <image name="dealbutton" width="81.666664123535156" height="31"/>
         <image name="logo" width="122" height="67"/>
+        <image name="replay" width="81.666664123535156" height="31"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
