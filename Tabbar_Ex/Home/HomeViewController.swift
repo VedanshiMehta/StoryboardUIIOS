@@ -24,7 +24,6 @@ class HomeViewController: UIViewController , UICollectionViewDelegate , UICollec
         cardCollectionView.delegate = self
         cardCollectionView.dataSource = self
 
-        // Do any additional setup after loading the view.
     }
     
 

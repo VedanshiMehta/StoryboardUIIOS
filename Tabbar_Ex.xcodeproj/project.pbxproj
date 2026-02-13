@@ -88,10 +88,10 @@
 		842182582F039CFC00EC2613 = {
 			isa = PBXGroup;
 			children = (
-				842182632F039CFC00EC2613 /* Tabbar_Ex */,
 				8421827A2F039CFE00EC2613 /* Tabbar_ExTests */,
 				842182842F039CFE00EC2613 /* Tabbar_ExUITests */,
 				842182622F039CFC00EC2613 /* Products */,
+				842182632F039CFC00EC2613 /* Tabbar_Ex */,
 			);
 			sourceTree = "<group>";
 		};
